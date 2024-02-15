@@ -1,17 +1,26 @@
+ Bem-vindo à documentação da API da Nunes Sports!
+ 
+ Esta API foi desenvolvida utilizando Node.js e o framework Express, permitindo listar, adicionar, editar e deletar produtos.
+
+O repositorio do front-end da aplicação encontra-se no link:  https://github.com/eduardo-felix/Nunes-Sports-Front
+
+ 
+
 **Configuração Inicial**
-Antes de iniciar a aplicação é necessário criar um banco de dados PostgresSQL usando os comandos
-Before running the API, it is necessary to create a PostgreSQL database and a table. Use the following SQL command to create the users table:
+
+Antes de iniciar a aplicação é necessário criar um banco de dados PostgresSQL e uma tabela de Produtos usando os seguintes comandos:
+
 
 ```javascript
-    CREATE TABLE users(
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-    linkedin TEXT NOT NULL,
-    github TEXT NOT NULL
+    create table Produtos (
+	id serial primary key,
+  	nome text not null,
+  	descricao text not null,
+  	preco numeric not null
 );
 ```
 
-After creating the database and the table, create a .env file with the following variables:
+Após criar o banco de dados e a tabela, crie um arquivo .env com as seguintes variáveis inserindo os valores corretos para a conexão com o banco de dados local:
 
 ```javascript
 DB_HOST=
@@ -20,6 +29,23 @@ DB_PASSWORD=
 DB_DATABASE=
 PORT=
 ```
+Em seguida instale as dependencias:
+
+```javascript
+npm install
+```
+
+Inicie o servidor utilizando o seguinte comando:
+
+```javascript
+npm run dev
+```
+Logo após, abra o repositorio do Front End e inicie a aplicação utilizando o comando:
+
+```javascript
+npm start
+```
+
 
 **Recursos**
 1. Listar Produtos
@@ -144,5 +170,7 @@ Descrição
 Esta rota permite deletar um produto existente com base no ID fornecido.
 
 Resposta de Sucesso
+
 Código: 204
+
 Conteúdo: Nenhum conteúdo retornado.

@@ -52,7 +52,7 @@ npm start
 
 Endpoint
 ```javascript
-GET /produtos
+GET '/'
 ```
 Descrição
 Esta rota permite listar todos os produtos cadastrados.
@@ -89,7 +89,7 @@ Conteúdo:
 
 Endpoint
 ```javascript
-POST /produtos
+POST /produto
 ```
 
 Descrição
@@ -126,7 +126,7 @@ Conteúdo:
 Endpoint
 
 ```javascript
-PATCH /produtos/:id
+PATCH /produto/:id
 ```
 
 Descrição
@@ -163,7 +163,7 @@ Conteúdo:
 Endpoint
 
 ```javascript
-DELETE /produtos/:id
+DELETE /produto/:id
 ```
 Descrição
 
